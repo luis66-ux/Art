@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        .btn-logout {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+        }
+
+        .table th, .table td {
+            width: auto;
+        }
+
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="post" action="{% url 'crearart5' %}">
+        {% csrf_token %}
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="2">¿Existen trabajos en simultaneo?</th>
+                    <th scope="col">Si su respuesta es SI, describa el contexto del trabajo en simultaneo y verifique</th>
+                    <th scope="col" colspan="2">¿Se realizó la coordinacion con el lider de la cuadrilla que realizó el trabajo en simultaneo?</th>
+                    <th scope="col" colspan="2">¿Se realizó la verificacion cruzada de controles criticos?</th>
+                    <th scope="col" colspan="2">¿Se comunico a todos los trabajadores las acciones de control que debe aplicar en trabajos simultaneos?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><input type="radio" name="pregunta_1" value="si"> Si</th>
+                    <td><input type="radio" name="pregunta_1" value="no"> No</td>
+                    <td><input type="text" name="pregunta_2"></td>
+                    <td><input type="radio" name="pregunta_3" value="si"> Si</td>
+                    <td><input type="radio" name="pregunta_3" value="no"> No</td>
+                    <td><input type="radio" name="pregunta_4" value="si"> Si</td>
+                    <td><input type="radio" name="pregunta_4" value="no"> No</td>
+                    <td><input type="radio" name="pregunta_5" value="si"> Si</td>
+                    <td><input type="radio" name="pregunta_5" value="no"> No</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" ></th>
+                    <th scope="col"></th>
+                    <th scope="col" ></th>
+                    <th scope="col" colspan="2">¿Verifique las condiciones fisicas y psicologicas de todo el equipo ejecutor del trabajo?</th>
+                    <th scope="col" ></th>
+
+                </tr>
+            </thead>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" rowspan="2"></th>
+                    <th scope="col" rowspan="2">Nombre</th>
+                    <th scope="col" rowspan="2">Cargo</th>
+                    <th scope="col">Si</th>
+                    <th scope="col">No</th>
+                    <th scope="col" rowspan="2">Firma</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="pregunta_6"></td>
+                    <td><input type="text" name="pregunta_7"></td>
+                    <td><input type="radio" name="pregunta_8" value="si"> Si</td>
+                    <td><input type="radio" name="pregunta_8" value="no"> No</td>
+                    <td>firmita</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="footer-buttons">
+            <button type="button" class="btn btn-secondary">Regresar</button>
+            <button type="submit" class="btn btn-primary" >Enviar ART</button>
+        </div>
+    </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

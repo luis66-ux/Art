@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        .btn-logout {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+        }
+
+        .btn-crear-art {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-crear-art:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Profile Card -->
+        <div class="card text-center">
+            <div class="card-header">
+                <img src="https://static.wikia.nocookie.net/dr-stone/images/c/ce/Dr._Xeno.png/revision/latest?cb=20200524201407" alt="Profile Picture" class="rounded-circle mx-auto d-block">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Nombre Grupo</h5>
+                <p class="card-text">Supervisador por:</p>
+                <p class="card-text">Nombre Supervisor</p>
+            </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="mt-4 text-center">
+            <button class="btn btn-crear-art"><i class="fas fa-plus"></i> Crear ART</button>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Nombre de la ART : nombreart
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre del Trabajador</th>
+                            <th scope="col">Estado ART</th>
+                            <th scope="col">Notificar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí puedes añadir las filas de la tabla con datos dinámicos -->
+                        <tr>
+                            <td>Trabajador 1</td>
+                            <td>Firmada</td>
+                            <td><button class="btn btn-warning">Notificar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Trabajador 2</td>
+                            <td>No firmada</td>
+                            <td><button class="btn btn-warning">Notificar</button></td>
+                        </tr>
+                        <!-- Fin de las filas de ejemplo -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>

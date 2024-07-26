@@ -1,0 +1,81 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row mb-4">
+        <div class="col-md-4 text-center">
+          <div class="profile-card">
+            <img class="profile-img" src="https://static.wikia.nocookie.net/dr-stone/images/c/ce/Dr._Xeno.png/revision/latest?cb=20200524201407" alt="Profile Picture">
+            <h2 class="mt-3">{{ user.username }}</h2>
+            <p class="text-muted">Full Stack Developer</p>
+            <p class="text-muted">Bay Area, San Francisco, CA</p>
+            <button class="btn btn-primary mr-2">Follow</button>
+            <button class="btn btn-outline-primary">Message</button>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="profile-details">
+            <h4>Personal Information</h4>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                <p><strong>Full Name:</strong>{{ user.username }}</p>
+                <p><strong>Email:</strong> fip@jukmuh.al</p>
+                <p><strong>Phone:</strong> (239) 816-9029</p>
+                <p><strong>Mobile:</strong> (320) 380-4539</p>
+                <p><strong>Address:</strong> Bay Area, San Francisco, CA</p>
+              </div>
+              <div class="col-sm-6 text-right">
+                <button class="btn btn-primary">Edit</button>
+              </div>
+            </div>
+          </div>
+          <div class="profile-details mt-4">
+            <h4>Currently Working</h4>
+            <hr>
+            <p><strong>Company:</strong> Wss</p>
+            <p><strong>Division:</strong> Gabriela Mistral</p>
+            <p><strong>Area:</strong> Sampling</p>
+            <p><strong>Status:</strong> Resting</p>
+          </div>
+          <div class="profile-details mt-4">
+            <h4>Groups</h4>
+            <hr>
+            <p>Group 1</p>
+            <p>Group 2</p>
+            <p>Group 3</p>
+            <p>Group 4</p>
+            <p>Group 5</p>
+          </div>
+          <div class="profile-details mt-4">
+            <h4>Last 10 ART</h4>
+            <hr>
+            <p><a href="#">ART 1</a></p>
+            <p><a href="#">ART 2</a></p>
+            <p><a href="#">ART 3</a></p>
+            <p><a href="#">ART 4</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>

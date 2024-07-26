@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .btn-primary {
+      margin-right: 10px;
+    }
+
+    .btn-logout {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: white;
+    }
+
+    .table th,
+    .table td {
+      width: 50%;
+    }
+
+    .footer-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <form action="{% url 'crearart3' %}" method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-4">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre:</th>
+                <th><input type="text" class="form-control" /></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">06</th>
+                <th scope="col">Si</th>
+                <th scope="col">No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_1" value="Si"></td>
+                <td><input type="radio" name="opcion_1" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_2" value="Si"></td>
+                <td><input type="radio" name="opcion_2" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_3" value="Si"></td>
+                <td><input type="radio" name="opcion_3" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_4" value="Si"></td>
+                <td><input type="radio" name="opcion_4" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_5" value="Si"></td>
+                <td><input type="radio" name="opcion_5" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_6" value="Si"></td>
+                <td><input type="radio" name="opcion_6" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_7" value="Si"></td>
+                <td><input type="radio" name="opcion_7" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_8" value="Si"></td>
+                <td><input type="radio" name="opcion_8" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_9" value="Si"></td>
+                <td><input type="radio" name="opcion_9" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_10" value="Si"></td>
+                <td><input type="radio" name="opcion_10" value="No"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-4">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre:</th>
+                <th><input type="text" class="form-control" /></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">06</th>
+                <th scope="col">Si</th>
+                <th scope="col">No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_11" value="Si"></td>
+                <td><input type="radio" name="opcion_11" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_12" value="Si"></td>
+                <td><input type="radio" name="opcion_12" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_13" value="Si"></td>
+                <td><input type="radio" name="opcion_13" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_14" value="Si"></td>
+                <td><input type="radio" name="opcion_14" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_15" value="Si"></td>
+                <td><input type="radio" name="opcion_15" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_16" value="Si"></td>
+                <td><input type="radio" name="opcion_16" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_17" value="Si"></td>
+                <td><input type="radio" name="opcion_17" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_18" value="Si"></td>
+                <td><input type="radio" name="opcion_18" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_19" value="Si"></td>
+                <td><input type="radio" name="opcion_19" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_20" value="Si"></td>
+                <td><input type="radio" name="opcion_20" value="No">
+                <td></td> <!-- This empty <td> element maintains the layout -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-4">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre:</th>
+                <th><input type="text" class="form-control" /></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">06</th>
+                <th scope="col">Si</th>
+                <th scope="col">No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">11</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_21" value="Si"></td>
+                <td><input type="radio" name="opcion_21" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">12</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_22" value="Si"></td>
+                <td><input type="radio" name="opcion_22" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">13</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_23" value="Si"></td>
+                <td><input type="radio" name="opcion_23" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">14</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_24" value="Si"></td>
+                <td><input type="radio" name="opcion_24" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">15</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_25" value="Si"></td>
+                <td><input type="radio" name="opcion_25" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">16</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_26" value="Si"></td>
+                <td><input type="radio" name="opcion_26" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">17</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_27" value="Si"></td>
+                <td><input type="radio" name="opcion_27" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">18</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_28" value="Si"></td>
+                <td><input type="radio" name="opcion_28" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">19</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_29" value="Si"></td>
+                <td><input type="radio" name="opcion_29" value="No"></td>
+              </tr>
+              <tr>
+                <th scope="row">20</th>
+                <td>01</td>
+                <td><input type="radio" name="opcion_30" value="Si"></td>
+                <td><input type="radio" name="opcion_30" value="No"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footer-buttons">
+        <button class="btn btn-secondary">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="redirectToCrearArt4()">Siguiente</button>
+        <button type="submit"> submitea</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script>
+    function redirectToCrearArt4() {
+      var url = "{% url 'crearart4' %}";
+      // Asegurarse de que la URL sea absoluta
+      if (!url.startsWith('/')) {
+        url = '/' + url;
+      }
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+
+
+</html>

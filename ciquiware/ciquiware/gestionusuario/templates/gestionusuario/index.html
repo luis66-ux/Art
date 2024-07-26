@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        .btn-logout {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Profile Card -->
+        <div class="card text-center">
+            <div class="card-header">
+                <img src="https://static.wikia.nocookie.net/dr-stone/images/c/ce/Dr._Xeno.png/revision/latest?cb=20200524201407" alt="Profile Picture" class="rounded-circle mx-auto d-block">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Bienvenido, {{ user.username }}!</h5>
+                <p class="card-text">Full Stack Developer</p>
+                <p class="card-text">Bay Area, San Francisco, CA</p>
+                <a href="#" class="btn btn-primary">Editar Usuario</a>
+                <form action="{% url 'logout' %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-logout">Logout</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="card mt-4">
+            <div class="card-header">
+                Perteneces a los grupos:
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>Grupo 1 </strong> grupo1</p>
+                <p class="card-text"><strong>Grupo 2</strong> grupo2</p>
+                <p class="card-text"><strong>Grupo 3</strong> grupo3</p>
+                <p class="card-text"><strong>Grupo 4</strong> grupo4</p>
+                <p class="card-text"><strong>Grupo 5</strong> grupo5</p>
+                <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
